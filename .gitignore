@@ -1,0 +1,5 @@
+*.local
+functions/venv
+functions/firebase-key.json
+ui-debug.log
+firebase-debug.log
