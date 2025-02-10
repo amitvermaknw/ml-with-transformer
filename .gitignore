@@ -1,5 +1,15 @@
 *.local
 functions/venv
+functions/venv/
 functions/firebase-key.json
 ui-debug.log
 firebase-debug.log
+*.log
+.DS_Store
+.vscode/
+__pycache__/
+*.pyc
+*.pyo
+
+functions/.env
+functions/.env_

@@ -12,12 +12,16 @@ from pydantic import BaseModel
 from typing import List, Optional
 import os 
 from dotenv import load_dotenv
-from src.controller.translator import Translator;
-from src.controller.grammar import Grammar;
+from src.controller.translator import Translator
+from src.controller.grammar import Grammar
+from src.config.serviceacc import Serviceacc
 
-load_dotenv()
+#load_dotenv()
 
-cred = credentials.Certificate(os.getenv("FIREBASE_CREDENTIALS"))
+# cred = credentials.Certificate(os.getenv("FIREBASE_CREDENTIALS"))
+service_acc = Serviceacc()
+cred = credentials.Certificate(service_acc.get_service_acc())
+
 firebase_admin.initialize_app(cred)
 
 db= firestore.client()

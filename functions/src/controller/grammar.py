@@ -1,4 +1,4 @@
-from src.config.grammodel import LoadModel
+from src.model.grammodel import LoadModel
 
 class Grammar:
     def handle_request(self, request):

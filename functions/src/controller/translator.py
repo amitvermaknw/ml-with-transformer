@@ -1,5 +1,5 @@
 
-from src.config.transmodel import LoadModel
+from src.model.transmodel import LoadModel
 
 
 class Translator:
