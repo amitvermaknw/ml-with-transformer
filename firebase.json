@@ -3,13 +3,23 @@
     {
       "source": "functions",
       "codebase": "default",
+      "serviceAccount": "dealsburstai-ea48f@appspot.gserviceaccount.com",
       "ignore": [
         "venv",
         ".git",
         "firebase-debug.log",
         "firebase-debug.*.log",
         "*.local"
-      ]
+      ],
+      "runtime": "python311"
     }
-  ]
+  ],
+  "emulators": {
+    "auth": { "port": 9099 },
+    "firestore": { "port": 8080 },
+    "database": { "port": 9000 },
+    "functions": { "port": 5001 },
+    "hosting": { "port": 5000 },
+    "pubsub": { "port": 8085 }
+  }
 }

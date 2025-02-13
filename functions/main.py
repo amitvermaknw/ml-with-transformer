@@ -11,10 +11,12 @@ from functions_framework import http
 from pydantic import BaseModel
 from typing import List, Optional
 import os 
-from dotenv import load_dotenv
 from src.controller.translator import Translator
 from src.controller.grammar import Grammar
 from src.config.serviceacc import Serviceacc
+from firebase_functions import https_fn
+import os
+os.environ["PYTHONWARNINGS"] = "ignore"
 
 #load_dotenv()
 
@@ -55,6 +57,7 @@ def fastapi_fun(request):
     handler = Mangum(app)
     return handler(request)
 
+fastapi_app = https_fn.on_request()(fastapi_fun)
 
 
 # initialize_app()
